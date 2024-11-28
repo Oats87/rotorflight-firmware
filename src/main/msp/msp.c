@@ -1013,8 +1013,6 @@ static bool mspCommonProcessOutCommand(int16_t cmdMSP, sbuf_t *dst, mspPostProce
          * sbufWriteU8(dst, currentPidProfile->yourFancyParameterA);
          * sbufWriteU8(dst, currentPidProfile->yourFancyParameterB);
         */
-        sbufWriteU8(dst, mixerConfig()->collective_scale_beta_pos);
-        sbufWriteU8(dst, mixerConfig()->collective_scale_beta_neg);
         break;
 
     default:
@@ -3604,15 +3602,7 @@ static mspResult_e mspCommonProcessInCommand(mspDescriptor_t srcDesc, int16_t cm
          *     currentPidProfile->yourFancyParameterA = sbufReadU8(src);
          *     currentPidProfile->yourFancyParameterB = sbufReadU8(src);
          * }
-<<<<<<< HEAD
-         */
-=======
         */
-        if (sbufBytesRemaining(src) >= 2) {
-            mixerConfigMutable()->collective_scale_beta_pos = sbufReadU8(src);
-            mixerConfigMutable()->collective_scale_beta_neg = sbufReadU8(src);
-        }
->>>>>>> 5395319c6 (Experimental: collective scaling)
         break;
 
     default:
