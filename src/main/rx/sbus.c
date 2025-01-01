@@ -56,7 +56,7 @@
  * time to send frame: 3ms.
  */
 
-#define SBUS_BAUDRATE                 100000
+#define SBUS_BAUDRATE                 98000
 #define SBUS_RX_REFRESH_RATE          11000
 #define SBUS_TIME_NEEDED_PER_FRAME    3000
 
