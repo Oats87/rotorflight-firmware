@@ -140,6 +140,7 @@ typedef struct pid_s {
 
     order1Filter_t crossCouplingFilter[XY_AXIS_COUNT];
 
+    float setpointRateLimit[PID_AXIS_COUNT];
 } pid_t;
 
 
